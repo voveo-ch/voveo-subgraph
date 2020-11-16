@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Assembly
@@ -18,7 +18,7 @@ dataSources:
         - votingCreated
       abis:
         - name: Assembly
-          file: ./abis/Assembly.json
+          file: Assembly\abis\Assembly.json
       eventHandlers:
         - event: feePaid(address,uint256)
           handler: handlefeePaid
@@ -28,4 +28,4 @@ dataSources:
           handler: handleownedPaymentReceived
         - event: votingCreated(address)
           handler: handlevotingCreated
-      file: ./src/mapping.ts
+      file: Assembly\Assembly.wasm
